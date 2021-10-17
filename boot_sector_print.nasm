@@ -19,7 +19,6 @@ done:
 
 print_endline:
     ; Print with endline
-    call print 
     mov ah, 0x0e 
     mov al, 0x0A
     int 0x10
