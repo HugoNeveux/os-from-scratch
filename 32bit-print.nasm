@@ -12,14 +12,14 @@ print_string_pm_loop:
     mov ah, WHITE_ON_BLACK
 
     cmp al, 0   ; Check if end of string
-    jp print_string_pm_done 
+    je print_string_pm_done 
 
     mov [edx], ax
-    inc ebx 
+    add ebx, 1
     add edx, 2
 
     jmp print_string_pm_loop
 
 print_string_pm_done:
     popa 
-    ret 
+    ret
